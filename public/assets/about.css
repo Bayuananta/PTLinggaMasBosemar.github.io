@@ -1,0 +1,40 @@
+.about{
+    padding-top: 40rem;
+    margin-bottom: 2rem;
+}
+
+.about-title{
+    text-align: center;
+}
+
+/* Features */
+
+.features{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.features-box{
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+    transition: all .2s;
+    padding: 32px;
+    cursor: pointer;
+}
+
+.features-icon{
+    color: var(--main-color) !important;
+}
+
+.features-box:hover,
+.features-box:active{
+    background-color: var(--main-color);
+    transform: scale(1.1);
+}
+
+.features-box:hover .features-icon,
+.features-box:hover h3,
+.features-box:hover p{
+    color: #fff !important;
+}
