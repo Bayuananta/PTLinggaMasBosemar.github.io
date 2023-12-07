@@ -15,3 +15,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [pageController::class,'home'])->name('index');
+Route::get('/contact', [pageController::class,'contact'])->name('contact');
+Route::get('/login', [pageController::class,'login'])->name('login');

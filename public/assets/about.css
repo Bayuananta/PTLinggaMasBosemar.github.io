@@ -1,40 +1,165 @@
 .about{
-    padding-top: 40rem;
-    margin-bottom: 2rem;
+    background-color: #f0f0f0;
+    margin-bottom: 10rem;
 }
 
-.about-title{
-    text-align: center;
+.about-wrapper{
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    max-width: 1440px;
+    margin: 0 auto;
+
 }
 
-/* Features */
+.about-right{
+    background: linear-gradient(var(--main-color, .9), rgba(29, 25, 153, 0.9));
+    grid-column: 1 / 1;
+    z-index: 98;
+    position: relative;
+}
 
-.features{
+.about-image{
+    padding: 64px;
+}
+.about-image-list{
+    margin: 0 auto;
+}
+.slick-prev{
+    left: 10% !important;
+}
+.slick-next{
+    right: 10% !important;
+}
+.about-left{
+    grid-column: 2 / 2;
+    position: relative;
+}
+.prev{
+    position: absolute;
+    left: 5%;
+    cursor:pointer;
+}
+.next{
+    position: absolute;
+    right: 5%;
+    cursor:pointer;
+}
+
+.about-icon{
+    color: var(--secondary-color) !important;
+}
+
+.about-button{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+}
+
+.about-content{
+    padding:50% 25% 50% 25%;
+}
+
+.about-shape-1{
+    position: absolute;
+    top: 30%;
+    left: 25%;
+}
+
+.about-shape-2{
+    position: absolute;
+    bottom: 35%;
+    right: 25%;
+}
+
+/* Iklan */
+
+.iklan{
+    padding: 32px 16px;
+}
+
+.iklan-wrapper{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4.375rem;
 }
 
-.features-box{
-    display: flex;
-    align-items: start;
-    gap: 1rem;
-    transition: all .2s;
-    padding: 32px;
-    cursor: pointer;
+.iklan-box{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background: linear-gradient(var(--main-color, .9), rgba(29, 25, 153, 0.9));
+    grid-row-gap: 2.188rem;
+    border-radius: 8px;
+    padding: 16px;
+    
 }
 
-.features-icon{
-    color: var(--main-color) !important;
+.iklan-image{
+    grid-column: 1 / -1;
+    grid-row: 1 / 1;
+    /* border: 3px solid var(--main-color); */
+    border-radius: 8px;
 }
 
-.features-box:hover,
-.features-box:active{
+.iklan-title{
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    z-index: 3;
+    align-self: end;
+    justify-self: center;
+    width: 80%;
+    font-size: 1rem;
+    text-align: center;
+    padding: 0.781rem;
     background-color: var(--main-color);
-    transform: scale(1.1);
+    color: #fff;
+    font-weight: 400;
+    transform: translateY(50%);
 }
 
-.features-box:hover .features-icon,
-.features-box:hover h3,
-.features-box:hover p{
-    color: #fff !important;
+.iklan-description{
+    grid-column: 1 / -1;
+    padding: 16px;
+    color: #fff;
+}
+
+.iklan-btn{
+    grid-column: 1 / -1;
+    padding: 16px 30px !important;
+    background-color: var(--secondary-color);
+    font-size: 0.938rem;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.iklan-btn-wrapper{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+@media (max-width: 1198.98px) {
+    .about-wrapper{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .about-content{
+        padding: 15% 25%;
+    }
+}
+
+@media (max-width: 575.98px){
+    .about-image{
+        padding: 16px;
+    }
+    .about-image-list{
+        height: 500px;
+    }
+}
+@media (max-width: 374.98px){
+    .about-content{
+        padding: 15%;
+    }
 }
